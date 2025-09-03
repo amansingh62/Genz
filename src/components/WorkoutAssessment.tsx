@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Tabs, Tab, Card, CardBody, CardHeader, Divider, Button, Badge, Progress } from "@heroui/react";
+import { Tabs, Tab, Card, CardBody, CardHeader, Divider, Button, Badge } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { WorkoutLevelCard } from "@/components/WorkoutLevelCard";
 import { WorkoutScheduleCard } from "@/components/WorkoutScheduleCard";
@@ -39,6 +39,11 @@ export default function WorkoutAssessment() {
     console.log("Opening Trainer Modal...");
     setIsBookTrainerModalOpen(true);
   };
+
+  // Handle tab selection change with proper typing
+  const handleTabChange = (key: React.Key) => {
+    setActiveTab(key.toString());
+  };
   
 
   const selectedWorkoutPlan = selectedLevel ? workoutPlans[selectedLevel] : null;
@@ -63,7 +68,7 @@ export default function WorkoutAssessment() {
             Workout Assessment
           </h1>
           <p className="text-gray-300 max-w-2xl mt-8 mx-auto text-lg">
-            Find the perfect workout plan for your fitness level. We'll help you choose exercises
+            Find the perfect workout plan for your fitness level. We wll help you choose exercises
             that match your experience and goals.
           </p>
         </header>
@@ -72,7 +77,7 @@ export default function WorkoutAssessment() {
           <CardBody className="p-0">
             <Tabs 
               selectedKey={activeTab} 
-              onSelectionChange={setActiveTab as any}
+              onSelectionChange={handleTabChange}
               variant="underlined"
               color="primary"
               size="lg"
@@ -210,7 +215,7 @@ export default function WorkoutAssessment() {
                         </div>
                         <h3 className="text-2xl font-bold mb-3 text-white">Ready to see your workout plan?</h3>
                         <p className="text-gray-300 mb-8 max-w-lg">
-                          We've prepared a customized {workoutLevels.find(l => l.id === selectedLevel)?.name.toLowerCase()} 
+                          We have prepared a customized {workoutLevels.find(l => l.id === selectedLevel)?.name.toLowerCase()} 
                           workout plan for you with {workoutLevels.find(l => l.id === selectedLevel)?.daysPerWeek} days 
                           of targeted exercises.
                         </p>

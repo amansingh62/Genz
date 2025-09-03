@@ -46,8 +46,13 @@ const SignIn: React.FC = () => {
 
       alert("Login Successful! Redirecting...");
       router.push("/"); // ✅ Redirect to dashboard
-    } catch (error: any) {
-      setError(error.message);
+    } catch (error) {
+      // Properly handle unknown error type
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("An unexpected error occurred");
+      }
     } finally {
       setLoading(false);
     }
@@ -89,7 +94,7 @@ const SignIn: React.FC = () => {
         </form>
 
         <p>
-          Don't have an account? <Link href="/signup" className="a2">Sign up!</Link>
+          Do not have an account? <Link href="/signup" className="a2">Sign up!</Link>
         </p>
       </div>
     </StyledWrapper>

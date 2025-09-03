@@ -103,7 +103,7 @@ export function BookTrainerModal({ isOpen, onOpenChange }: BookTrainerModalProps
                     </div>
                     <h3 className="text-xl font-bold text-success-400 mb-2">Booking Successful!</h3>
                     <p className="text-center text-gray-300">
-                      We've received your request and will contact you shortly to confirm your appointment.
+                      We have received your request and will contact you shortly to confirm your appointment.
                     </p>
                   </div>
                 ) : (

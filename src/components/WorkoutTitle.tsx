@@ -55,7 +55,7 @@ export default function WorkoutPage() {
           className="text-sm md:text-xl mt-5 text-gray-300 max-w-2xl ml-10 text-left leading-relaxed"
         >
           Push your limits, break barriers, and transform your body and mind.  
-          Whether you're a beginner or a pro,<span className="text-transparent bg-clip-text bg-gradient-to-b from-[#1E3A8A] to-[#06B6D4] text-2xl"><strong> consistency</strong></span> is the key to success. 
+          Whether you are a beginner or a pro,<span className="text-transparent bg-clip-text bg-gradient-to-b from-[#1E3A8A] to-[#06B6D4] text-2xl"><strong> consistency</strong></span> is the key to success. 
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#1E3A8A] to-[#06B6D4] text-2xl"><strong> Stay dedicated, stay strong,</strong></span> and become the best version of <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#1E3A8A] to-[#06B6D4] text-2xl"><strong>yourself!</strong></span>
         </motion.p>
       </div>

@@ -11,8 +11,6 @@ interface AnimatedTextProps {
 
 export function AnimatedText({
   text,
-  delay = 0.05,
-  duration = 2,
   className = "text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent",
 }: AnimatedTextProps) {
   const [displayText, setDisplayText] = useState("")
@@ -22,7 +20,6 @@ export function AnimatedText({
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const i = loopNum % text.length
       const fullText = text
 
       if (!isDeleting) {

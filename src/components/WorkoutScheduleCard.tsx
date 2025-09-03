@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardHeader, Divider, Chip, Badge } from "@heroui/react";
+import { Card, CardBody, CardHeader, Divider, Chip } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
 interface Exercise {

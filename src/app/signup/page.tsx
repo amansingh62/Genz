@@ -45,8 +45,13 @@ const SignUp: React.FC = () => {
 
       alert("Signup Successful! Redirecting to login...");
       router.push("/signin"); // ✅ Redirect to login page after signup
-    } catch (error: any) {
-      setError(error.message);
+    } catch (error) {
+      // Properly handle unknown error type
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("An unexpected error occurred");
+      }
     } finally {
       setLoading(false);
     }
