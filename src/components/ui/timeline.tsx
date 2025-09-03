@@ -1,6 +1,5 @@
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -42,7 +41,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Get Started With The Journey
         </h2>
         <p className="text-neutral-300 text-lg md:text-lg max-w-xl">
-          We're on a mission to revolutionize fitness with you. GenZ Fitness offers expert workout plans, personalized diet plans, and the right mentorship to help you achieve your fitness goals.
+          We are on a mission to revolutionize fitness with you. GenZ Fitness offers expert workout plans, personalized diet plans, and the right mentorship to help you achieve your fitness goals.
         </p>
       </div>
 

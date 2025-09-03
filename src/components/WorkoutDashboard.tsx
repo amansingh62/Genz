@@ -10,7 +10,7 @@ import { ProgressChart } from "@/components/ProgressChart";
 
 export function WorkoutDashboard() {
   const [logs, setLogs] = React.useState<WorkoutLogData[]>([]);
-  const [selectedExercise, setSelectedExercise] = React.useState("Bench Press");
+  const [selectedExercise] = React.useState("Bench Press");
 
   const handleLogSubmit = (data: WorkoutLogData) => {
     setLogs((prev) => [...prev, data]);
